@@ -32,3 +32,13 @@ export const flexBoxOptions = [
   { key: 'alignItems', label: 'align-items', value: alignItems },
   { key: 'alignContent', label: 'align-content', value: alignContent },
 ]
+
+export const alignSelf = ['auto', 'flex-start', 'flex-end', 'center', 'baseline', 'stretch']
+
+export const flexItemOptions = [
+  { key: 'order', label: 'order', value: '' },
+  { key: 'flexGrow', label: 'flex-grow', value: '' },
+  { key: 'flexShrink', label: 'flex-shrink', value: '' },
+  { key: 'flexBasis', label: 'flex-basis', value: '' },
+  { key: 'alignSelf', label: 'align-self', value: alignSelf },
+]
