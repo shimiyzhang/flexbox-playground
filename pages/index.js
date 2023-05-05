@@ -11,6 +11,19 @@ export default function Home() {
     <>
       <Head>
         <title>Flexbox Playground</title>
+        <meta property="og:type" content="website" />
+        <meta name="robots" content="follow, index" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta property="og:url" content="https://flexbox-playground-sigma.vercel.app" />
+        <meta />
+        <meta
+          name="description"
+          content="Flexbox Playground是一个用于探索Flex布局的Web应用程序。它提供了一个Flex容器和项目的编辑器。用户可以单击项目以查看其属性，并在编辑器中更改这些属性。"
+        />
+        <meta
+          property="og:description"
+          content="Flexbox Playground是一个用于探索Flex布局的Web应用程序。它提供了一个Flex容器和项目的编辑器。用户可以单击项目以查看其属性，并在编辑器中更改这些属性。"
+        />
       </Head>
       <main className="flex h-screen w-screen items-center justify-between bg-gray-100">
         <FlexboxProvider>
