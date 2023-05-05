@@ -44,6 +44,18 @@ function flexItemsReducer(flexItems, action) {
         }
       })
     }
+    case 'reset': {
+      return flexItems.map((f) => {
+        if (f.id === action.id) {
+          return {
+            ...f,
+            value: initFlexItemValue
+          }
+        } else {
+          return f
+        }
+      })
+    }
     case 'deleted': {
       return flexItems.filter((f) => f.id !== action.id)
     }

@@ -45,6 +45,22 @@ export default function Menu({ activeId }) {
               Add Flex Item
             </Button>
           )}
+          {tab === 'ITEMS' && !isNull && (
+            <Button
+              className="my-4"
+              type="primary"
+              danger
+              block
+              onClick={() =>
+                flexItemsDispatch?.({
+                  type: 'reset',
+                  id: activeId,
+                })
+              }
+            >
+              Reset Item Styles
+            </Button>
+          )}
           {isNull ? (
             <p className="rounded bg-blue-50 p-4 text-sm leading-normal text-blue-900">{message}</p>
           ) : (
