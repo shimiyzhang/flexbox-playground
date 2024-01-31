@@ -4,7 +4,10 @@ import { flexBoxOptions, flexItemOptions } from '@/data/flexBoxData'
 import { FlexboxContext, FlexboxDispatchContext } from '@/context/FlexboxContext'
 import { FlexItemsContext, FlexItemsDispatchContext } from '@/context/FlexItemsContext'
 
-const tabOptions = ['CONTAINER', 'ITEMS']
+const tabOptions = [
+  { label: '容器', value: 'CONTAINER' },
+  { label: '元素', value: 'ITEMS' },
+]
 
 export default function Menu({ activeId }) {
   const flexbox = useContext(FlexboxContext)
@@ -23,7 +26,7 @@ export default function Menu({ activeId }) {
 
   const message =
     flexItems?.length > 0
-      ? '单击左侧容器中的伸缩项以编辑其样式。'
+      ? '单击左侧容器中的元素以编辑其样式。'
       : '首先在另一个选项卡中添加一个项目。'
 
   return (
@@ -42,7 +45,7 @@ export default function Menu({ activeId }) {
                 })
               }
             >
-              Add Flex Item
+              添加元素
             </Button>
           )}
           {tab === 'ITEMS' && !isNull && (
@@ -58,7 +61,7 @@ export default function Menu({ activeId }) {
                 })
               }
             >
-              Reset Item Styles
+              重置样式
             </Button>
           )}
           {isNull ? (
