@@ -28,10 +28,10 @@ export default function Home() {
       <main className="flex h-screen w-screen items-center justify-between bg-gray-100">
         <FlexboxProvider>
           <FlexItemsProvider>
-            <section className="h-full w-3/4">
+            <section className="h-full w-full sm:w-3/4">
               <FlexBox activeId={activeId} setActiveId={setActiveId} />
             </section>
-            <menu className="h-full w-1/4 border-l border-gray-300 bg-white">
+            <menu className="fixed bottom-0 h-1/2 w-full border-l border-gray-300 bg-white sm:relative sm:h-full sm:w-1/4">
               <Menu activeId={activeId} />
             </menu>
           </FlexItemsProvider>
